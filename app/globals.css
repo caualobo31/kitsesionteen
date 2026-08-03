@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --color-cream: #f7f2e7;
+  --color-cream-alt: #efe9db;
+  --color-ink: #201d18;
+  --color-ink-soft: #4a453c;
+  --color-muted: #7a7468;
+  --color-forest: #253a30;
+  --color-forest-soft: #33493d;
+  --color-terracotta: #bd5b37;
+  --color-terracotta-dark: #a1492b;
+  --color-line: #e2dac8;
+}
+
+@theme inline {
+  --color-cream: var(--color-cream);
+  --color-cream-alt: var(--color-cream-alt);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-muted: var(--color-muted);
+  --color-forest: var(--color-forest);
+  --color-forest-soft: var(--color-forest-soft);
+  --color-terracotta: var(--color-terracotta);
+  --color-terracotta-dark: var(--color-terracotta-dark);
+  --color-line: var(--color-line);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-merriweather);
+  --animate-marquee: marquee 34s linear infinite;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
