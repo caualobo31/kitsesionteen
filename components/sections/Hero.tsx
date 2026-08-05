@@ -31,7 +31,9 @@ export function Hero() {
         </div>
 
         <div className="mt-10 w-full sm:w-auto">
-          <Button href="#precio">Quiero mi kit ahora</Button>
+          <Button href="#mira-por-dentro" className="animate-cta-pulse">
+            Quiero mi kit ahora
+          </Button>
         </div>
 
         {/*

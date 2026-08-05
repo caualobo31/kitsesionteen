@@ -1,12 +1,13 @@
 import { Container } from "@/components/ui/Container";
 import { SmartImage } from "@/components/ui/SmartImage";
+import { Button } from "@/components/ui/Button";
 
 const examples = [1, 2, 3, 4, 5, 6];
 const track = [...examples, ...examples];
 
 export function InsideGallery() {
   return (
-    <section className="py-20 sm:py-28">
+    <section id="mira-por-dentro" className="scroll-mt-8 py-20 sm:py-28">
       <Container className="text-center">
         <h2 className="font-serif text-3xl font-black text-ink sm:text-4xl">
           Míralo por dentro. Con calma.
@@ -30,6 +31,10 @@ export function InsideGallery() {
           ))}
         </div>
       </div>
+
+      <Container className="mt-12 flex justify-center">
+        <Button href="#todo-lo-que-te-llevas">Ver todo lo que incluye</Button>
+      </Container>
     </section>
   );
 }

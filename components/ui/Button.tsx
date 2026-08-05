@@ -22,9 +22,13 @@ export function Button({
   variant?: Variant;
   className?: string;
 }) {
+  const isExternal = /^https?:\/\//.test(href);
+
   return (
     <Link
       href={href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       className={`inline-flex w-full items-center justify-center rounded-full px-8 py-4 text-base font-semibold transition-colors sm:w-auto ${variants[variant]} ${className}`}
     >
       {children}

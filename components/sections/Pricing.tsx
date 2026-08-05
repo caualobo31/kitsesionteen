@@ -58,7 +58,11 @@ export function Pricing() {
             <p className="mt-1 text-sm text-muted">Pago único</p>
 
             <div className="mt-6 w-full">
-              <Button href="#checkout-esencial" variant="outline" className="w-full">
+              <Button
+                href="https://pay.hotmart.com/V107003312K"
+                variant="outline"
+                className="w-full"
+              >
                 Quiero el Kit Esencial
               </Button>
             </div>
@@ -110,7 +114,11 @@ export function Pricing() {
             </p>
 
             <div className="mt-6 w-full">
-              <Button href="#checkout-completo" variant="onDark" className="w-full">
+              <Button
+                href="https://pay.hotmart.com/I106911097O"
+                variant="onDark"
+                className="w-full animate-cta-pulse"
+              >
                 Quiero el Kit Completo
               </Button>
             </div>

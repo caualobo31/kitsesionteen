@@ -11,6 +11,7 @@ export function SmartImage({
   aspect = "aspect-[4/5]",
   tone = "light",
   priority = false,
+  fit = "cover",
 }: {
   src: string;
   alt: string;
@@ -19,6 +20,7 @@ export function SmartImage({
   aspect?: string;
   tone?: "light" | "dark";
   priority?: boolean;
+  fit?: "cover" | "contain";
 }) {
   const exists = fs.existsSync(path.join(process.cwd(), "public", src));
 
@@ -40,7 +42,7 @@ export function SmartImage({
         alt={alt}
         fill
         priority={priority}
-        className="object-cover"
+        className={fit === "contain" ? "object-contain" : "object-cover"}
         sizes="(max-width: 640px) 90vw, 480px"
       />
     </div>

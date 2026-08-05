@@ -36,7 +36,7 @@ const bonuses = [
 
 export function Includes() {
   return (
-    <section className="bg-cream-alt py-20 sm:py-28">
+    <section id="todo-lo-que-te-llevas" className="scroll-mt-8 bg-cream-alt py-20 sm:py-28">
       <Container>
         <h2 className="text-center font-serif text-3xl font-black text-ink sm:text-4xl">
           Todo lo que te llevas

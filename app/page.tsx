@@ -5,6 +5,7 @@ import { InsideGallery } from "@/components/sections/InsideGallery";
 import { WeekFlow } from "@/components/sections/WeekFlow";
 import { NotBigKid } from "@/components/sections/NotBigKid";
 import { Includes } from "@/components/sections/Includes";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { Pricing } from "@/components/sections/Pricing";
 import { Guarantee } from "@/components/sections/Guarantee";
 import { FAQ } from "@/components/sections/FAQ";
@@ -20,6 +21,7 @@ export default function Home() {
       <WeekFlow />
       <NotBigKid />
       <Includes />
+      <Testimonials />
       <Pricing />
       <Guarantee />
       <FAQ />
