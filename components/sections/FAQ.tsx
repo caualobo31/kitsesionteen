@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { NextSectionArrow } from "@/components/ui/NextSectionArrow";
 
 const faqs = [
   {
@@ -81,6 +82,8 @@ export function FAQ() {
             );
           })}
         </div>
+
+        <NextSectionArrow />
       </Container>
     </section>
   );

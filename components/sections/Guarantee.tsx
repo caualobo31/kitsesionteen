@@ -1,5 +1,6 @@
 import { ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { NextSectionArrow } from "@/components/ui/NextSectionArrow";
 
 export function Guarantee() {
   return (
@@ -16,6 +17,8 @@ export function Guarantee() {
           </p>
           <p className="font-medium text-ink">El riesgo es todo nuestro.</p>
         </div>
+
+        <NextSectionArrow />
       </Container>
     </section>
   );

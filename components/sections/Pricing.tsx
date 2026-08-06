@@ -1,7 +1,8 @@
-import { Check, Gift } from "lucide-react";
+import { Check, ChevronDown, Gift } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { SmartImage } from "@/components/ui/SmartImage";
+import { PriceTag } from "@/components/ui/PriceTag";
 
 const esencialBullets = [
   "+80 recursos visuales terapéuticos",
@@ -53,7 +54,7 @@ export function Pricing() {
             </div>
 
             <p className="mt-6 font-serif text-4xl font-bold text-ink">
-              USD 9
+              <PriceTag usd={9} />
             </p>
             <p className="mt-1 text-sm text-muted">Pago único</p>
 
@@ -69,15 +70,24 @@ export function Pricing() {
 
             <ul className="mx-auto mt-8 w-fit space-y-3 border-t border-line pt-6">
               {esencialBullets.map((text) => (
-                <li key={text} className="flex items-center gap-2">
-                  <Check
-                    className="h-5 w-5 shrink-0 text-terracotta"
-                    strokeWidth={2.5}
-                  />
+                <li key={text} className="flex items-center gap-2.5">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-terracotta">
+                    <Check className="h-3 w-3 text-cream" strokeWidth={3} />
+                  </span>
                   <span className="text-sm text-ink-soft">{text}</span>
                 </li>
               ))}
             </ul>
+
+            <div className="mt-8 w-full rounded-2xl border border-line bg-cream-alt px-6 py-5 text-center">
+              <p className="text-sm font-semibold text-ink">
+                +80 recursos y 4 bonos exclusivos con el Kit Completo
+              </p>
+              <ChevronDown
+                className="mx-auto mt-2 h-5 w-5 animate-bounce text-terracotta"
+                strokeWidth={2}
+              />
+            </div>
           </div>
 
           {/* Kit Completo */}
@@ -106,8 +116,12 @@ export function Pricing() {
               />
             </div>
 
-            <p className="mt-6 font-serif text-4xl font-bold text-cream">
-              USD 17
+            <p className="mt-6 text-sm text-cream/80">
+              El kit completo para transformar tus sesiones
+            </p>
+
+            <p className="mt-3 font-serif text-4xl font-bold text-cream">
+              <PriceTag usd={17} />
             </p>
             <p className="mt-1 text-sm text-cream/80">
               Pago único · Acceso inmediato
@@ -116,7 +130,7 @@ export function Pricing() {
             <div className="mt-6 w-full">
               <Button
                 href="https://pay.hotmart.com/I106911097O"
-                variant="onDark"
+                variant="primary"
                 className="w-full animate-cta-pulse"
               >
                 Quiero el Kit Completo
@@ -125,11 +139,10 @@ export function Pricing() {
 
             <ul className="mx-auto mt-8 w-fit space-y-3 border-t border-cream/15 pt-6">
               {completoBullets.map((text) => (
-                <li key={text} className="flex items-center gap-2">
-                  <Check
-                    className="h-5 w-5 shrink-0 text-terracotta"
-                    strokeWidth={2.5}
-                  />
+                <li key={text} className="flex items-center gap-2.5">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-terracotta">
+                    <Check className="h-3 w-3 text-cream" strokeWidth={3} />
+                  </span>
                   <span className="text-sm text-cream/90">{text}</span>
                 </li>
               ))}

@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { NextSectionArrow } from "@/components/ui/NextSectionArrow";
 
 export function ViaLateral() {
   return (
@@ -27,6 +28,8 @@ export function ViaLateral() {
         <p className="mt-10 max-w-2xl font-serif text-2xl font-bold italic text-terracotta sm:text-3xl">
           Ninguno de los 80 recursos empieza por &ldquo;¿cómo te sientes?&rdquo;.
         </p>
+
+        <NextSectionArrow />
       </Container>
     </section>
   );

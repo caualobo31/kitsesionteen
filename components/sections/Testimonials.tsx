@@ -1,5 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { SmartImage } from "@/components/ui/SmartImage";
+import { Button } from "@/components/ui/Button";
+import { NextSectionArrow } from "@/components/ui/NextSectionArrow";
 
 const testimonials = [1, 2, 3];
 const track = [...testimonials, ...testimonials];
@@ -31,6 +33,17 @@ export function Testimonials() {
           ))}
         </div>
       </div>
+
+      <Container className="mt-14 flex flex-col items-center gap-5 text-center">
+        <p className="font-serif text-xl font-bold text-ink sm:text-2xl">
+          Elige tu kit y empieza a aplicarlo esta misma semana.
+        </p>
+        <Button href="#precio" className="animate-cta-pulse">
+          Ver las ofertas
+        </Button>
+      </Container>
+
+      <NextSectionArrow />
     </section>
   );
 }

@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { NextSectionArrow } from "@/components/ui/NextSectionArrow";
 
 const bullets = [
   "Abres una carpeta organizada por motivo de consulta y en 30 segundos sabes qué aplicar.",
@@ -30,6 +31,8 @@ export function WeekFlow() {
             </li>
           ))}
         </ul>
+
+        <NextSectionArrow />
       </Container>
     </section>
   );
