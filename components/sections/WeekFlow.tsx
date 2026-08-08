@@ -18,9 +18,12 @@ export function WeekFlow() {
           Cómo se ve tu semana con el kit adentro.
         </h2>
 
-        <ul className="mx-auto mt-12 max-w-2xl space-y-5">
+        <ul className="mx-auto mt-12 max-w-2xl space-y-4">
           {bullets.map((text) => (
-            <li key={text} className="flex items-start gap-4">
+            <li
+              key={text}
+              className="flex items-start gap-4 rounded-2xl border border-line bg-cream p-5 text-left shadow-sm"
+            >
               <ArrowRight
                 className="mt-1 h-4 w-4 shrink-0 text-terracotta"
                 strokeWidth={2.5}

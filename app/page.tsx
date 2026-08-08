@@ -1,6 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
 import { TrustBar } from "@/components/sections/TrustBar";
-import { ViaLateral } from "@/components/sections/ViaLateral";
 import { InsideGallery } from "@/components/sections/InsideGallery";
 import { WeekFlow } from "@/components/sections/WeekFlow";
 import { NotBigKid } from "@/components/sections/NotBigKid";
@@ -16,7 +15,6 @@ export default function Home() {
     <main>
       <Hero />
       <TrustBar />
-      <ViaLateral />
       <InsideGallery />
       <WeekFlow />
       <NotBigKid />

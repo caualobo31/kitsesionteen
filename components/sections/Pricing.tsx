@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { PriceTag } from "@/components/ui/PriceTag";
+import { CountdownBadge } from "@/components/ui/CountdownBadge";
 
 const esencialBullets = [
   "+80 recursos visuales terapéuticos",
@@ -29,7 +30,9 @@ export function Pricing() {
   return (
     <section id="precio" className="scroll-mt-8 py-20 sm:py-28">
       <Container className="text-center">
-        <h2 className="font-serif text-3xl font-black text-ink sm:text-4xl">
+        <CountdownBadge />
+
+        <h2 className="mt-5 font-serif text-3xl font-black text-ink sm:text-4xl">
           Elige tu kit
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-base text-ink-soft sm:text-lg">
