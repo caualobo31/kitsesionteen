@@ -1,0 +1,44 @@
+import { Zap, Shield, Lock } from "lucide-react";
+
+const trust = [
+  { icon: Zap, label: "Acceso inmediato" },
+  { icon: Shield, label: "Garantía de 15 días" },
+  { icon: Lock, label: "Compra 100% segura" },
+];
+
+export default function InactionCost() {
+  return (
+    <section className="bg-accent px-5 md:px-8 py-14 md:py-20">
+      <div className="max-w-4xl mx-auto text-center">
+        <div className="flex flex-col items-center gap-8 anim-fade-up">
+          <div>
+            <h2 className="font-fraunces font-semibold text-2xl md:text-4xl leading-tight tracking-tight mb-4 text-white">
+              Tu paciente adolescente merece recursos hechos para él.
+            </h2>
+            <p className="text-white/90 font-inter text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+              No atiendes a un adulto con fichas de niños. No atiendes a un
+              niño con técnicas de adulto. El adolescente también necesita
+              algo pensado para él.
+            </p>
+          </div>
+
+          <a
+            href="#contenido"
+            className="inline-flex items-center justify-center bg-white text-accent font-inter font-bold text-base px-10 py-4 rounded-full transition-all duration-200 hover:bg-[#FFE5B4] hover:scale-[1.02] min-h-[44px]"
+          >
+            Quiero mi kit ahora
+          </a>
+
+          <div className="flex flex-wrap justify-center gap-6">
+            {trust.map(({ icon: Icon, label }) => (
+              <div key={label} className="flex items-center gap-2">
+                <Icon className="w-4 h-4 text-white/70" strokeWidth={2} />
+                <span className="text-white/90 font-inter text-sm">{label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

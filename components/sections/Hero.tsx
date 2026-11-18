@@ -1,49 +1,85 @@
-import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
-import { SmartImage } from "@/components/ui/SmartImage";
+import { Zap, Printer, LayoutGrid, Layers, Monitor } from "lucide-react";
+import Image from "next/image";
 
-export function Hero() {
+const features = [
+  { icon: Zap, label: "Acceso inmediato tras la compra" },
+  { icon: Printer, label: "Lo imprimes y lo usas en la misma sesión" },
+  { icon: LayoutGrid, label: "Organizado por motivo de consulta" },
+  { icon: Layers, label: "+80 recursos listos para usar" },
+  { icon: Monitor, label: "Funciona online y presencial" },
+];
+
+export default function Hero() {
   return (
-    <section className="pt-16 pb-12 sm:pt-24 sm:pb-16">
-      <Container className="flex flex-col items-center text-center">
-        <p className="text-xs font-semibold uppercase tracking-widest text-terracotta sm:text-sm">
-          Sin improvisar la entrada. Sin adaptar material de niños.
+    <section className="bg-background px-5 md:px-8 py-14 md:py-20">
+      <div className="max-w-6xl mx-auto flex flex-col items-center text-center gap-6">
+
+        <p
+          className="text-xs uppercase tracking-widest text-accent font-inter font-semibold anim-fade-up"
+        >
+          Atiende adolescentes sin improvisar, sin adaptar y sin bloqueos.
         </p>
 
-        <h1 className="mt-5 max-w-3xl font-serif text-4xl font-black uppercase leading-[1.15] text-ink sm:text-5xl md:text-6xl">
-          +80 Recursos que hacen hablar al adolescente{" "}
-          <span className="text-terracotta">sin preguntarle nada</span>
+        <h1
+          className="font-fraunces font-bold text-2xl md:text-5xl lg:text-6xl text-text-primary leading-tight tracking-tight max-w-4xl anim-fade-up"
+          style={{ animationDelay: "80ms" }}
+        >
+          <span className="text-accent">+80 RECURSOS TERAPÉUTICOS VISUALES</span>{" "}
+          PARA CUALQUIER PROBLEMA QUE LLEGUE A TU CONSULTA.
         </h1>
 
-        <p className="mt-6 max-w-xl text-base text-ink-soft sm:text-lg">
-          Habla del material primero. Después habla de él. Visuales, maduros,
-          organizados por motivo de consulta y listos para imprimir.
+        <p
+          className="text-sm md:text-base text-text-muted font-inter leading-relaxed max-w-xl anim-fade-up"
+          style={{ animationDelay: "160ms" }}
+        >
+          Material listo para aplicar, con el lenguaje que él respeta.
         </p>
 
-        <div className="mt-10 w-full max-w-md sm:max-w-lg">
-          <SmartImage
-            src="mockup 2 kt latam.png"
-            alt="Kit Sesión Teen"
-            label="Mockup kit completo (ES): pendiente"
-            aspect="aspect-[5/4]"
+        <div
+          className="w-full max-w-3xl mx-auto anim-fade-up"
+          style={{ animationDelay: "220ms" }}
+        >
+          <Image
+            src="/mockup 2 kt latam.png"
+            alt="Kit Sesión Teen: recursos visuales terapéuticos para adolescentes"
+            width={1200}
+            height={900}
+            sizes="(min-width: 768px) 768px, 100vw"
+            className="w-full h-auto rounded-2xl"
             priority
           />
         </div>
 
-        <div className="mt-10 w-full sm:w-auto">
-          <Button href="#mira-por-dentro" className="animate-cta-pulse">
+        <div
+          className="flex flex-col items-center gap-3 w-full anim-fade-up"
+          style={{ animationDelay: "300ms" }}
+        >
+          <a
+            href="#galeria"
+            className="inline-flex items-center justify-center w-full md:w-auto bg-accent hover:bg-accent-hover text-white font-inter font-semibold text-base px-10 py-4 rounded-full transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/20 min-h-[44px]"
+          >
             Quiero mi kit ahora
-          </Button>
+          </a>
+          {/* Prueba social numérica omitida a propósito: solo publicar un número
+              ("+X psicólogas ya usan los Kits Sesión") si es un dato real que
+              incluya compradoras hispanohablantes. */}
         </div>
 
-        {/*
-          BLOQUEO 1 (ver doc, sección 5): la línea "+2.000 psicólogas ya usan
-          los Kits Consultorio" solo puede publicarse si el número es un
-          agregado real que incluye compradoras hispanas. No confirmado
-          todavía, por eso se omite del render. Preguntar a Cauã antes de
-          agregar cualquier prueba social numérica.
-        */}
-      </Container>
+        <div
+          className="flex flex-wrap justify-center gap-x-6 gap-y-3 anim-fade-up"
+          style={{ animationDelay: "380ms" }}
+        >
+          {features.map(({ icon: Icon, label }) => (
+            <div key={label} className="flex items-center gap-2">
+              <Icon className="w-4 h-4 text-accent flex-shrink-0" strokeWidth={2} />
+              <span className="text-text-primary font-inter text-sm font-medium">
+                {label}
+              </span>
+            </div>
+          ))}
+        </div>
+
+      </div>
     </section>
   );
 }

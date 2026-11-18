@@ -1,29 +1,28 @@
-import { Hero } from "@/components/sections/Hero";
-import { TrustBar } from "@/components/sections/TrustBar";
-import { InsideGallery } from "@/components/sections/InsideGallery";
-import { WeekFlow } from "@/components/sections/WeekFlow";
-import { NotBigKid } from "@/components/sections/NotBigKid";
-import { Includes } from "@/components/sections/Includes";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { Pricing } from "@/components/sections/Pricing";
-import { Guarantee } from "@/components/sections/Guarantee";
-import { FAQ } from "@/components/sections/FAQ";
-import { FinalCTA, Footer } from "@/components/sections/FinalCTA";
+import Hero from "@/components/sections/Hero";
+import Gallery from "@/components/sections/Gallery";
+import Transformation from "@/components/sections/Transformation";
+import InactionCost from "@/components/sections/InactionCost";
+import Stack from "@/components/sections/Stack";
+import SocialProof from "@/components/sections/SocialProof";
+import Offer from "@/components/sections/Offer";
+import Guarantee from "@/components/sections/Guarantee";
+import FAQ from "@/components/sections/FAQ";
+import Footer from "@/components/sections/Footer";
+import TopBanner from "@/components/TopBanner";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-background min-h-screen">
+      <TopBanner />
       <Hero />
-      <TrustBar />
-      <InsideGallery />
-      <WeekFlow />
-      <NotBigKid />
-      <Includes />
-      <Testimonials />
-      <Pricing />
+      <Gallery />
+      <Transformation />
+      <InactionCost />
+      <SocialProof />
+      <Stack />
+      <Offer />
       <Guarantee />
       <FAQ />
-      <FinalCTA />
       <Footer />
     </main>
   );
