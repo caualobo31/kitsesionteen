@@ -1,4 +1,8 @@
 import { Zap, Shield, Lock } from "lucide-react";
+import Image from "next/image";
+
+// Fotos do material em uso. Para adicionar mais, coloque em /public e acrescente aqui.
+const photos = [1, 2, 3, 4, 5].map((n) => `/uso${n}.webp`);
 
 const trust = [
   { icon: Zap, label: "Acceso inmediato" },
@@ -20,6 +24,28 @@ export default function InactionCost() {
               niño con técnicas de adulto. El adolescente también necesita
               algo pensado para él.
             </p>
+          </div>
+
+          <div className="w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+            <div
+              className="flex gap-3 w-max animate-marquee"
+              style={{ animationDuration: "30s" }}
+            >
+              {[...photos, ...photos].map((src, i) => (
+                <div
+                  key={i}
+                  className="w-40 md:w-52 flex-shrink-0 aspect-[3/2] relative rounded-xl overflow-hidden border border-white/20 shadow-md"
+                >
+                  <Image
+                    src={src}
+                    alt="Psicóloga usando el Kit Sesión Teen en consulta"
+                    fill
+                    sizes="(min-width: 768px) 208px, 160px"
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           <a
