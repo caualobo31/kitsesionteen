@@ -1,6 +1,5 @@
 import { Check } from "lucide-react";
 import Image from "next/image";
-import BonusCover from "@/components/shared/BonusCover";
 
 const Q = '"';
 
@@ -14,21 +13,25 @@ const bullets = [
 
 const bonuses = [
   {
+    img: "/bonus1.webp",
     title: "Guía de Primera Sesión con Adolescentes",
     desc: `Guion de 8 pasos para que hable más que un ${Q}no sé${Q} en el primer encuentro.`,
     from: "9,00 €",
   },
   {
+    img: "/bonus2.webp",
     title: "Guía \"Hablar con los Padres\"",
     desc: "Cómo hacer la devolución a los padres sin exponer al adolescente.",
     from: "9,00 €",
   },
   {
+    img: "/bonus3.webp",
     title: "Banco de Frases para Desbloquear la Sesión",
     desc: "60 preguntas probadas para cuando se bloquea o contesta con monosílabos.",
     from: "12,00 €",
   },
   {
+    img: "/bonus4.webp",
     title: "Plantillas de Anamnesis y Devolución",
     desc: "Fichas listas para recoger la historia clínica y devolver resultados a los padres de forma clara y profesional.",
     from: "15,00 €",
@@ -95,14 +98,21 @@ export default function Stack() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-          {bonuses.map(({ title, desc, from, full }, i) => (
+          {bonuses.map(({ img, title, desc, from, full }, i) => (
             <div
               key={title}
               className={`bg-surface-1 border border-border rounded-2xl p-6 flex gap-5 items-start anim-fade-up${full ? " md:col-span-2" : ""}`}
               style={{ animationDelay: `${240 + i * 70}ms` }}
             >
               <div className="flex-shrink-0 w-20 md:w-24">
-                <BonusCover n={i + 1} title={title} />
+                <Image
+                  src={img}
+                  alt={title}
+                  width={400}
+                  height={400}
+                  sizes="96px"
+                  className="w-full h-auto rounded-lg object-cover shadow-sm"
+                />
               </div>
               <div className="flex-1">
                 <p className="font-inter font-bold text-text-primary text-sm md:text-base leading-tight mb-1">
@@ -112,7 +122,7 @@ export default function Stack() {
                   {desc}
                 </p>
                 <p className="font-inter text-sm">
-                  <span className="line-through text-red-400 mr-2">Valorado en {from}</span>
+                  <span className="line-through text-red-400 mr-2 whitespace-nowrap">Valorado en {from}</span>
                   <span className="font-bold text-highlight">GRATIS</span>
                 </p>
               </div>
