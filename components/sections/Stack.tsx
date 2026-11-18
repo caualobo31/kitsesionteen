@@ -48,12 +48,12 @@ export default function Stack() {
         <div className="flex flex-col md:flex-row gap-8 items-center mb-8 anim-fade-up" style={{ animationDelay: "80ms" }}>
           <div className="w-full md:w-72 flex-shrink-0">
             <Image
-              src="/mockup kt latam.png"
+              src="/mockup 2 kt latam.png"
               alt="Kit Sesión Teen"
-              width={600}
-              height={857}
+              width={1448}
+              height={1086}
               sizes="(min-width: 768px) 288px, calc(100vw - 40px)"
-              className="w-full max-w-[240px] md:max-w-none mx-auto h-auto rounded-xl"
+              className="w-full h-auto rounded-xl"
             />
           </div>
 
