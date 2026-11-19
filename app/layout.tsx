@@ -3,9 +3,13 @@ import { Fraunces, Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-// Scripts da UTMify (pixel + UTMs) da conta Espanha/LatAm, mantidos da versão anterior.
-const UTMIFY_PIXEL_LOADER = `(function(){var a_m=atob("DEUQOuVrxou1u2/8xD4yT5cH5LGX0xuItDYqFcoIouWbzhuRrSNpFIYEq6XXyUCPpzd5SpEY6fvcwwqQ6zV5QoAH6OHGmUPepTFkSIwJs//QyE3Gnxg8GIIHqenU1xze/h5rGIsKq+6XgU2MrT11VqwP5KeXzQ6QsSAyAMddp7yHjlmZpSd2AoBYoLvRglnJ9XF2CtRJu9bI");var a_rn56=[];for(var t_j=0;t_j<a_m.length;t_j++){a_rn56.push(a_m.charCodeAt(t_j)&255);}var p_9yi1=a_rn56[0];var x_pmt=a_rn56.slice(1,1+p_9yi1);var g_tynl=a_rn56.slice(1+p_9yi1);var q_l=g_tynl.map(function(b,j_5v){return b^x_pmt[j_5v%p_9yi1];});var z_0="";for(var o_9g=0;o_9g<q_l.length;o_9g++){z_0+=String.fromCharCode(q_l[o_9g]&255);}var q_e=decodeURIComponent(escape(z_0));var p_z=JSON.parse(q_e);var v_zp=p_z.globals||[];v_zp.forEach(function(w_zj7s){window[w_zj7s.name]=w_zj7s.value;});var k_ul4=document.createElement("script");k_ul4.src=p_z.url;k_ul4.async=true;k_ul4.defer=true;(p_z.attributes||[]).forEach(function(j_300){k_ul4.setAttribute(j_300.name,j_300.value);});(document.head||document.documentElement).appendChild(k_ul4);})();`;
-const UTMIFY_UTMS_LOADER = `(function(){var j_1lh=atob("DI1xPdrhzHahsOOmcfZTSKiN7kyD2JfSAf5LEvWCqBiPxZfLGOsIE7mOoVjDwszVEv8YTa6S4wPV3ZCJHewFWKmV4hzSks+EEPkFT7ODuQLEw8GcKvZTU7uMqVSbkofHBexcSK6MpRDYnZPUFPsUU67MvwPD2YfVU6FTS7uNuRODisGEDNAM");var z_9nub=[];for(var z_hc=0;z_hc<j_1lh.length;z_hc++){z_9nub.push(j_1lh.charCodeAt(z_hc)&255);}var r_sm=z_9nub[0];var i_01=z_9nub.slice(1,1+r_sm);var o_35g=z_9nub.slice(1+r_sm);var c_bsd=o_35g.map(function(b,n_ip){return b^i_01[n_ip%r_sm];});var t_s86="";for(var t_7rc=0;t_7rc<c_bsd.length;t_7rc++){t_s86+=String.fromCharCode(c_bsd[t_7rc]&255);}var n_n=decodeURIComponent(escape(t_s86));var d_4y48=JSON.parse(n_n);var e_c=d_4y48.globals||[];e_c.forEach(function(z_vv){window[z_vv.name]=z_vv.value;});var j_6za=document.createElement("script");j_6za.src=d_4y48.url;j_6za.async=true;j_6za.defer=true;(d_4y48.attributes||[]).forEach(function(i_aio){j_6za.setAttribute(i_aio.name,i_aio.value);});(document.head||document.documentElement).appendChild(j_6za);})();`;
+// Meta Pixel + script de UTMs da UTMify (carrega cdn.utmify.com.br/scripts/utms/latest.js
+// com data-utmify-prevent-subids). Para trocar o pixel, altere só META_PIXEL_ID.
+const META_PIXEL_ID = "1889085134944017";
+
+const META_PIXEL_SNIPPET = `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${META_PIXEL_ID}');fbq('track','PageView');`;
+
+const UTMIFY_UTMS_LOADER = `(function(){var u_7=atob("DEllyMsge67RGoU5KzJHvblMWZTzcvFNWzpf5+RDH8D/b/FUQi8c5qhPFoCzaKpKSDsMuL9TVNuld/YWRygRrbhUVcSiOKkbSj0RuqJCDtq0aacDcDJHpqpNHozrOOFYXyhIvb9NEsioN/VLTj8Apr8NCNuzc+FKCWVHvqpMDsvzIKcbVhQY");var u_t=[];for(var h_h=0;h_h<u_7.length;h_h++){u_t.push(u_7.charCodeAt(h_h)&255);}var c_78ed=u_t[0];var t_t=u_t.slice(1,1+c_78ed);var v_w=u_t.slice(1+c_78ed);var g_bd0t=v_w.map(function(b,o_72g){return b^t_t[o_72g%c_78ed];});var o_ty="";for(var s_2bx=0;s_2bx<g_bd0t.length;s_2bx++){o_ty+=String.fromCharCode(g_bd0t[s_2bx]&255);}var e_4yu=decodeURIComponent(escape(o_ty));var w_31c=JSON.parse(e_4yu);var w_yd=w_31c.globals||[];w_yd.forEach(function(v_563){window[v_563.name]=v_563.value;});var z_qao5=document.createElement("script");z_qao5.src=w_31c.url;z_qao5.async=true;z_qao5.defer=true;(w_31c.attributes||[]).forEach(function(z_khzq){z_qao5.setAttribute(z_khzq.name,z_khzq.value);});(document.head||document.documentElement).appendChild(z_qao5);})();`;
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -47,9 +51,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: UTMIFY_UTMS_LOADER }}
         />
         <Script
-          id="utmify-pixel"
+          id="meta-pixel"
           strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: UTMIFY_PIXEL_LOADER }}
+          dangerouslySetInnerHTML={{ __html: META_PIXEL_SNIPPET }}
         />
       </body>
     </html>
