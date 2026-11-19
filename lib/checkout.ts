@@ -20,10 +20,3 @@ export function checkoutLinkClick(e: MouseEvent<HTMLAnchorElement>) {
   e.preventDefault();
   goToCheckout(e.currentTarget.href);
 }
-
-export function checkoutClick(url: string) {
-  return (e: MouseEvent) => {
-    e.preventDefault();
-    goToCheckout(url);
-  };
-}
